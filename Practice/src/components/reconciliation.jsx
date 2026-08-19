@@ -1,4 +1,4 @@
-// Reconciliation
+// React Diffing/Reconciliation Algorithm
 
 import { useState } from 'react';
 
@@ -12,7 +12,7 @@ function FruitList() {
   /* The "key" prop helps React's diffing algorithm know
   which list item is which, so it only adds the new one
   instead of re-rendering the entire list. */
-  
+
   return (
     <div>
       <button onClick={addFruit}>Add Mango</button>
