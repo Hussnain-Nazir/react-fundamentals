@@ -1,8 +1,10 @@
+import React from 'react';
 import Greeting from './components/jsx';
 import Counter from './components/virtual-dom';
 import FruitList from './components/reconciliation';
 import WelcomeMessage from './components/simple-component';
 import ParentPage from './components/parent-child';
+import Clock from './components/lifecycle-methods';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <WelcomeMessage />
       <hr />
       <ParentPage />
+      <hr />
+      <Clock />
     </div>
   );
 }

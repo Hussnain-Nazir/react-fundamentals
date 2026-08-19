@@ -1,5 +1,7 @@
 // JSX
 
+import React from 'react';
+
 function Greeting() {
   const name = 'Sarah';
 

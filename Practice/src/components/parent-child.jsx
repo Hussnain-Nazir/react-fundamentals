@@ -1,5 +1,7 @@
 // Parent-Child Relationship between Components
 
+import React from 'react';
+
 // Child Component
 function ChildCard({ title }) {
   return <div className="card"><h3>{title}</h3></div>;

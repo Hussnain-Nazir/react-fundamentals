@@ -1,6 +1,6 @@
 // React Diffing/Reconciliation Algorithm
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 function FruitList() {
   const [fruits, setFruits] = useState(['Apple', 'Banana', 'Cherry']);
