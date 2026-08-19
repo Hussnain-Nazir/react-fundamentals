@@ -8,14 +8,14 @@ class Clock extends React.Component {
     this.state = { time: new Date().toLocaleTimeString() };
   }
 
-  // Runs once, right after the component first appears on screen ("is born")
+  // Runs once, right after the component first appears on screens
   componentDidMount() {
     this.timerId = setInterval(() => {
       this.setState({ time: new Date().toLocaleTimeString() });
     }, 1000);
   }
 
-  // Runs right before the component is removed from the screen ("dies")
+  // Runs right before the component is removed from the screen
   componentWillUnmount() {
     clearInterval(this.timerId);
   }
