@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 
-function Clock() {
+function HooksClock() {
   const [time, setTime] = useState(new Date().toLocaleTimeString());
 
   useEffect(() => {
@@ -18,4 +18,4 @@ function Clock() {
   return <h2>Current time: {time}</h2>;
 }
 
-export default Clock;
+export default HooksClock;

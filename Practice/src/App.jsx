@@ -5,6 +5,7 @@ import FruitList from './components/reconciliation';
 import WelcomeMessage from './components/simple-component';
 import ParentPage from './components/parent-child';
 import Clock from './components/lifecycle-methods';
+import HooksClock from './components/useeffect-lifecycle';
 
 function App() {
   return (
@@ -20,6 +21,9 @@ function App() {
       <ParentPage />
       <hr />
       <Clock />
+      <hr />
+      <HooksClock />
+      <hr />
     </div>
   );
 }
