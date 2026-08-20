@@ -6,6 +6,9 @@ import WelcomeMessage from './components/simple-component';
 import ParentPage from './components/parent-child';
 import Clock from './components/lifecycle-methods';
 import HooksClock from './components/useeffect-lifecycle';
+import LightSwitch from './components/state';
+import UserList from './components/Props';
+
 
 function App() {
   return (
@@ -24,6 +27,9 @@ function App() {
       <hr />
       <HooksClock />
       <hr />
+      <LightSwitch />
+      <hr />
+      <UserList />
     </div>
   );
 }
