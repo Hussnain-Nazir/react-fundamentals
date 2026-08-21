@@ -9,6 +9,7 @@ import HooksClock from './components/useeffect-lifecycle';
 import LightSwitch from './components/state';
 import UserList from './components/Props';
 import Counters from './components/state-vs-props';
+import Theme from './components/context-api';
 
 
 function App() {
@@ -33,6 +34,8 @@ function App() {
       <UserList />
       <hr />
       <Counters />
+      <hr />
+      <Theme />
     </div>
   );
 }
