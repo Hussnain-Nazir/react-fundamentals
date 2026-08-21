@@ -10,6 +10,7 @@ import LightSwitch from './components/state';
 import UserList from './components/Props';
 import Counters from './components/state-vs-props';
 import Theme from './components/context-api';
+import CardList from './components/composition';
 
 
 function App() {
@@ -36,6 +37,8 @@ function App() {
       <Counters />
       <hr />
       <Theme />
+      <hr />
+      <CardList />
     </div>
   );
 }
