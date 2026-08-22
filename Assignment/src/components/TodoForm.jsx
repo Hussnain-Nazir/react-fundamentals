@@ -1,15 +1,17 @@
 import { useState } from "react";
+import { useTodos } from "../context/TodoContext";
 
-/* Controlled input for creating a new todo. Keeps its own draft text
- in state, hands the finished value up via onAdd, then clears itself. */
-export default function TodoForm({ onAdd }) {
+/* Controlled input for creating a new todo. addTodo comes from context
+instead of an onAdd prop. */
+export default function TodoForm() {
+  const { addTodo } = useTodos();
   const [text, setText] = useState("");
 
   function handleSubmit(e) {
     e.preventDefault();
     const trimmed = text.trim();
-    if (!trimmed) return; // ignore empty/whitespace-only submissions
-    onAdd(trimmed);
+    if (!trimmed) return;
+    addTodo(trimmed);
     setText("");
   }
 
