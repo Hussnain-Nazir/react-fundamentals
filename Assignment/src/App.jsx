@@ -2,8 +2,8 @@ import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 import { useTodos } from "./context/TodoContext";
 
-/* No state of its own — todos state lives in TodoProvider (see
-main.jsx), so App just reads what it needs to render. */
+/* Reads the shared todo state via useTodos() and renders the header
+and the pending/completed lists. */
 export default function App() {
   const { pending, completed } = useTodos();
 

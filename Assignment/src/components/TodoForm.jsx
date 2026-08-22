@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useTodos } from "../context/TodoContext";
 
-/* Controlled input for creating a new todo. addTodo comes from context
-instead of an onAdd prop. */
+/* Controlled input for creating a new todo. Keeps its own draft text
+in state, then calls addTodo (from context) to commit it. */
 export default function TodoForm() {
   const { addTodo } = useTodos();
   const [text, setText] = useState("");

@@ -1,7 +1,7 @@
 import { createContext, useContext, useState } from "react";
 
-/* Shared todo state, available to any component in the tree via
-useTodos() instead of being passed down through props. */
+/* Holds the todo list and the actions that operate on it, so any
+component under TodoProvider can access them via useTodos(). */
 const TodoContext = createContext(null);
 
 export function TodoProvider({ children }) {

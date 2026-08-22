@@ -1,8 +1,8 @@
 import { useTodos } from "../context/TodoContext";
 
-/* `todo` still arrives as a prop - it's this item's own data, not
-shared state. toggle/delete come from context since they're actions
-on the shared list, not something TodoList needs to know about. */
+/* Renders a single todo row. `todo` is passed in as a prop since it's
+this item's own data; toggle/delete are pulled from context since
+they act on the shared todo list. */
 export default function TodoItem({ todo }) {
   const { toggleTodo, deleteTodo } = useTodos();
 

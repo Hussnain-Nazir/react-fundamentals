@@ -1,8 +1,7 @@
 import TodoItem from "./TodoItem";
 
-/* Only takes what's local display config (which todos, what to label
-them). No onToggle/onDelete pass-through — TodoItem gets those from
-context directly. */
+// Renders one labeled group of todos (e.g. "Pending" or "Completed").
+// Falls back to an empty-state message when the group has nothing in it.
 export default function TodoList({ title, todos, emptyMessage }) {
   return (
     <section className="todo-section">
