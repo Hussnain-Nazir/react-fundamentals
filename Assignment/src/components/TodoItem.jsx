@@ -1,11 +1,16 @@
-/* Renders a single todo row. Has no state of its own - it only calls
- the functions its parent passed down. */
-export default function TodoItem({ todo, onToggle, onDelete }) {
+import { useTodos } from "../context/TodoContext";
+
+/* `todo` still arrives as a prop - it's this item's own data, not
+shared state. toggle/delete come from context since they're actions
+on the shared list, not something TodoList needs to know about. */
+export default function TodoItem({ todo }) {
+  const { toggleTodo, deleteTodo } = useTodos();
+
   return (
     <li className={`todo-item${todo.completed ? " completed" : ""}`}>
       <button
         className={`todo-checkbox${todo.completed ? " checked" : ""}`}
-        onClick={() => onToggle(todo.id)}
+        onClick={() => toggleTodo(todo.id)}
         aria-label={todo.completed ? "Mark as pending" : "Mark as completed"}
       >
         ✓
@@ -15,7 +20,7 @@ export default function TodoItem({ todo, onToggle, onDelete }) {
       </span>
       <button
         className="todo-delete-btn"
-        onClick={() => onDelete(todo.id)}
+        onClick={() => deleteTodo(todo.id)}
         aria-label="Delete todo"
       >
         ✕
