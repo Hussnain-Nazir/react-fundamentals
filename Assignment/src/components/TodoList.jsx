@@ -1,8 +1,9 @@
 import TodoItem from "./TodoItem";
 
-// Renders one labeled group of todos (e.g. "Pending" or "Completed").
-// Falls back to an empty-state message when the group has nothing in it.
-export default function TodoList({ title, todos, onToggle, onDelete, emptyMessage }) {
+/* Only takes what's local display config (which todos, what to label
+them). No onToggle/onDelete pass-through — TodoItem gets those from
+context directly. */
+export default function TodoList({ title, todos, emptyMessage }) {
   return (
     <section className="todo-section">
       <h2 className="todo-section-title">
@@ -13,7 +14,7 @@ export default function TodoList({ title, todos, onToggle, onDelete, emptyMessag
       ) : (
         <ul className="todo-list">
           {todos.map((todo) => (
-            <TodoItem key={todo.id} todo={todo} onToggle={onToggle} onDelete={onDelete} />
+            <TodoItem key={todo.id} todo={todo} />
           ))}
         </ul>
       )}
